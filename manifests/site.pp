@@ -82,7 +82,9 @@ node default {
       'findutils',
       'gnu-tar',
       'markdown',
-      'aspell'
+      'aspell',
+      'ec2-ami-tools',
+      'ec2-api-tools'
     ]:
   }
 
@@ -96,6 +98,8 @@ node default {
 
   include vagrant
   vagrant::plugin { 'vagrant-aws': }
+  vagrant::plugin { 'vagrant-salt': }
+#  vagrant::plugin { 'vagrant-ansible': }
   vagrant::box {'precise64/virtualbox':
     source => 'http://files.vagrantup.com/precise64.box'
   }
