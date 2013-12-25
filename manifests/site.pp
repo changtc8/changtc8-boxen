@@ -75,6 +75,16 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
+  class { 'ruby::global':
+     version => '1.9.3'
+  }
+ 
+  $version = "1.9.3"
+    ruby::gem { "rspec for ${version}":
+      gem     => 'rspec',
+      ruby    => $version,
+  }
+
   # common, useful packages
   package {
     [
@@ -106,4 +116,8 @@ node default {
 
   include virtualbox
   include sourcetree
+
+# does not work without virtual env
+  include python
+# python::pip { 'jinja2':}
 }
