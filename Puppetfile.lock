@@ -58,11 +58,11 @@ GITHUBTARBALL
   specs:
     openssl (1.0.0)
 
- GITHUBTARBALL
-   remote: boxen/puppet-python
-   specs:
-     python (1.1.1)
- 
+GITHUBTARBALL
+  remote: boxen/puppet-python
+  specs:
+    python (1.1.1)
+
 GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:

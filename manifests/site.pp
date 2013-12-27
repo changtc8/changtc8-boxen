@@ -76,10 +76,10 @@ node default {
   include ruby::2_0_0
 
   class { 'ruby::global':
-     version => '1.9.3'
+     version => '2.0.0'
   }
  
-  $version = "1.9.3"
+  $version = "2.0.0"
     ruby::gem { "rspec for ${version}":
       gem     => 'rspec',
       ruby    => $version,
